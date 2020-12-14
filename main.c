@@ -320,4 +320,6 @@ int main(){
         }
 
     } while(opcao != 6);
+
+    return 0;
 }
