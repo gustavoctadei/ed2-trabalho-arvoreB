@@ -241,20 +241,20 @@ void ajusta_no(No *no, int posicao){
     }
 }
 
-// Imprime
-void imprime(No *no){
+// Imprime in-ordem
+void imprime_in_ordem(No *no){
     int i;
 
     if(no){
         for(i = 0; i < raiz->cont; i++){
-            imprime(no->no_filho[i]);
-            printf("%d ", no->chave[i + 1]);
+            imprime_in_ordem(no->no_filho[i]);
+            if(i + 1 <= no->cont) printf("%d ", no->chave[i + 1]);
         }
-        imprime(no->no_filho[i]);
+        imprime_in_ordem(no->no_filho[i]);
     }
-    
 }
 
+// Destroi a arvore
 void destruir_arvore(No *no){
     int i;
     
@@ -266,6 +266,7 @@ void destruir_arvore(No *no){
     }
 }
 
+// Verifica se a Árvore está vazia
 void vazia(No *no){
     if(no == NULL || no->cont == 0) printf("A arvore estah vazia.\n");
     else printf("A arvore nao estah vazia.\n");
@@ -296,12 +297,16 @@ int main(){
                 break;
 
             case 3:
+                imprime_in_ordem(raiz);
+                printf("\n");
                 break;
 
             case 4:
+                printf("Em Desenvolvimento.\n");
                 break;
 
             case 5:
+                printf("Em Desenvolvimento.\n");
                 break;
 
             case 6:
