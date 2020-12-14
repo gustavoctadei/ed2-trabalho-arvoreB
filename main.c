@@ -314,5 +314,5 @@ int main(){
                 break;
         }
 
-    }while(opcao != 6);
+    } while(opcao != 6);
 }
